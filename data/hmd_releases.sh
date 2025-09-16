@@ -2,9 +2,25 @@
 # This script contains open source version information and download links for HMD devices.
 # Generated automatically. Device order matches the HMD website.
 
+DEVICE_HUMAN="HMD Arc"
+# Oldest -> Newest
+VERSIONS=(
+  # https://hmdcorporate.blob.core.windows.net/opensource/download/phones/HMD_Arc_V1.220.tar.bz2
+  "HMD_Arc_V1.220.tar"
+)
+
+DEVICE_HUMAN="HMD Vibe 5G"
+# Oldest -> Newest
+VERSIONS=(
+  # https://hmdcorporate.blob.core.windows.net/opensource/download/phones/HMD_Vibe_5G_V1.050.tar.bz2
+  "HMD_Vibe_5G_V1.050.tar"
+)
+
 DEVICE_HUMAN="HMD Fusion"
 # Oldest -> Newest
 VERSIONS=(
+  # https://hmdcorporate.blob.core.windows.net/opensource/download/phones/HMD_Fusion_V2.430.tar.bz2
+  "HMD_Fusion_V2.430.tar"
   # https://hmdcorporate.blob.core.windows.net/opensource/download/phones/HMD_Fusion_V1.130.tar.bz2
   "HMD_Fusion_V1.130.tar"
 )
