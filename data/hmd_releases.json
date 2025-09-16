@@ -1,5 +1,21 @@
 {
+  "HMD Arc": [
+    {
+      "name": "HMD_Arc_V1.220.tar",
+      "link": "https://hmdcorporate.blob.core.windows.net/opensource/download/phones/HMD_Arc_V1.220.tar.bz2"
+    }
+  ],
+  "HMD Vibe 5G": [
+    {
+      "name": "HMD_Vibe_5G_V1.050.tar",
+      "link": "https://hmdcorporate.blob.core.windows.net/opensource/download/phones/HMD_Vibe_5G_V1.050.tar.bz2"
+    }
+  ],
   "HMD Fusion": [
+    {
+      "name": "HMD_Fusion_V2.430.tar",
+      "link": "https://hmdcorporate.blob.core.windows.net/opensource/download/phones/HMD_Fusion_V2.430.tar.bz2"
+    },
     {
       "name": "HMD_Fusion_V1.130.tar",
       "link": "https://hmdcorporate.blob.core.windows.net/opensource/download/phones/HMD_Fusion_V1.130.tar.bz2"
