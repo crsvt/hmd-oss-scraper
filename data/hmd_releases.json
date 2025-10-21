@@ -61,6 +61,10 @@
   ],
   "HMD Vibe": [
     {
+      "name": "HMDVibe_V1.110.tar.bz2",
+      "link": "https://hmdcorporate.blob.core.windows.net/opensource/download/phones/HMDVibe_V1.110.tar.bz2"
+    },
+    {
       "name": "HMDVibe_V1.040.tar.bz2",
       "link": "https://hmdcorporate.blob.core.windows.net/opensource/download/phones/HMDVibe_V1.040.tar.bz2"
     }
