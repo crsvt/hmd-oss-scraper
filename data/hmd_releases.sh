@@ -67,6 +67,8 @@ VERSIONS=(
 DEVICE_HUMAN="HMD Vibe"
 # Oldest -> Newest
 VERSIONS=(
+  # https://hmdcorporate.blob.core.windows.net/opensource/download/phones/HMDVibe_V1.110.tar.bz2
+  "HMDVibe_V1.110.tar.bz2"
   # https://hmdcorporate.blob.core.windows.net/opensource/download/phones/HMDVibe_V1.040.tar.bz2
   "HMDVibe_V1.040.tar.bz2"
 )
