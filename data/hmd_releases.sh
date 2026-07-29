@@ -2,6 +2,27 @@
 # This script contains open source version information and download links for HMD devices.
 # Generated automatically. Device order matches the HMD website.
 
+DEVICE_HUMAN="HMD Vibe2 5G"
+# Oldest -> Newest
+VERSIONS=(
+  # https://mobileintra.sharepoint.com/teams/Kernelsourcecodeshare/Shared%20Documents/HMD%20Vibe2%205G/HMDVibe2_5G_V1.060.tar.bz2
+  "HMDVibe2_5G_V1.060.tar"
+)
+
+DEVICE_HUMAN="HMD Luma"
+# Oldest -> Newest
+VERSIONS=(
+  # https://mobileintra.sharepoint.com/teams/Kernelsourcecodeshare/Shared%20Documents/HMD%20Luma/HMD_Luma_V1.050.tar.xz
+  "HMD_Luma_V1.050.tar"
+)
+
+DEVICE_HUMAN="HMD Terra M"
+# Oldest -> Newest
+VERSIONS=(
+  # https://mobileintra.sharepoint.com/teams/Kernelsourcecodeshare/Shared%20Documents/HMD%20Cupra/HMD_Cupra_V1.100.tar.bz2
+  "HMD_Cupra_V1.100.tar.bz2"
+)
+
 DEVICE_HUMAN="HMD Arc"
 # Oldest -> Newest
 VERSIONS=(
