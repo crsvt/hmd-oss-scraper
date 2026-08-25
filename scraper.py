@@ -5,6 +5,7 @@ import re
 import json
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor
 
 URL = "https://www.hmd.com/en_int/opensource"
 HEADERS = {
@@ -66,11 +67,60 @@ def scrape_hmd_opensource():
                     href = 'https://' + href
                 
                 if version_name and href:
-                    versions_with_links.append({"name": version_name, "link": href})
+                    entry = {"name": version_name, "link": href}
+                    # HMD's page sometimes lists the same archive twice.
+                    if entry not in versions_with_links:
+                        versions_with_links.append(entry)
             
             if versions_with_links:
                 devices[device_name] = versions_with_links[::-1]
 
+    return devices
+
+
+def probe_archive(entry):
+    """HEADs an archive URL to record its current identity on the CDN.
+
+    HMD sometimes re-uploads a corrected package under the SAME filename and
+    URL, so name/link alone cannot detect that the contents changed. The
+    blob's ETag does.
+    """
+    try:
+        r = requests.head(entry["link"], headers=HEADERS,
+                          timeout=TIMEOUT, allow_redirects=True)
+        if r.status_code >= 400:
+            return entry["link"], None, None
+        etag = r.headers.get("ETag", "").strip('"') or None
+        size = r.headers.get("Content-Length")
+        return entry["link"], etag, int(size) if size and size.isdigit() else None
+    except requests.exceptions.RequestException:
+        return entry["link"], None, None
+
+
+def enrich_with_etags(devices):
+    """Annotates every release with the CDN ETag and size of its archive."""
+    unique = {}
+    for versions in devices.values():
+        for v in versions:
+            unique.setdefault(v["link"], v)
+
+    print(f"Probing {len(unique)} archive URLs for changes...")
+    results = {}
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        for link, etag, size in pool.map(probe_archive, unique.values()):
+            results[link] = (etag, size)
+
+    unreachable = 0
+    for versions in devices.values():
+        for v in versions:
+            etag, size = results.get(v["link"], (None, None))
+            v["etag"] = etag
+            v["size"] = size
+            if etag is None:
+                unreachable += 1
+
+    if unreachable:
+        print(f"Warning: {unreachable} archive(s) unreachable; recorded with null etag.")
     return devices
 
 def read_from_json(filename="data/hmd_releases.json"):
@@ -116,6 +166,8 @@ if __name__ == "__main__":
     old_data = read_from_json(JSON_FILENAME)
     
     new_data = scrape_hmd_opensource()
+    if new_data:
+        new_data = enrich_with_etags(new_data)
 
     if not new_data:
         print("Could not retrieve new data. Exiting.")
