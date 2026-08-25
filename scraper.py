@@ -3,16 +3,45 @@ from bs4 import BeautifulSoup
 import os
 import re
 import json
+import sys
+import time
+
+URL = "https://www.hmd.com/en_int/opensource"
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+}
+MAX_ATTEMPTS = 5
+TIMEOUT = 30
+
+def fetch_page():
+    """Fetches the open source page, retrying on transient upstream errors."""
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        try:
+            response = requests.get(URL, headers=HEADERS, timeout=TIMEOUT)
+            response.raise_for_status()
+            return response
+        except requests.exceptions.RequestException as e:
+            status = getattr(e.response, 'status_code', None)
+            retryable = status is None or status >= 500 or status == 429
+            print(f"Attempt {attempt}/{MAX_ATTEMPTS} failed: {e}")
+            if not retryable or attempt == MAX_ATTEMPTS:
+                return None
+            delay = 5 * (2 ** (attempt - 1))
+            print(f"Retrying in {delay}s...")
+            time.sleep(delay)
+    return None
 
 def scrape_hmd_opensource():
     """Scrapes the HMD website for device open source files."""
-    url = "https://www.hmd.com/en_int/opensource"
     print("Fetching latest data from HMD website...")
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
-    except requests.exceptions.RequestException as e:
-        print(f"Error fetching the URL: {e}")
+    response = fetch_page()
+    if response is None:
+        print("Error: could not fetch the URL after retries.")
         return None
 
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -90,6 +119,7 @@ if __name__ == "__main__":
 
     if not new_data:
         print("Could not retrieve new data. Exiting.")
+        sys.exit(1)
     else:
         if old_data == new_data:
             print(f"\nNo new versions found. Files are already up-to-date.")
