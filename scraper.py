@@ -66,6 +66,11 @@ def scrape_hmd_opensource():
                 elif 'azureedge.net' in href and not href.startswith('http'):
                     href = 'https://' + href
                 
+                # /download/libraries/ holds shared library source (e.g. vcard.tar),
+                # not device kernels. Feature phones list nothing else.
+                if '/download/libraries/' in href:
+                    continue
+
                 if version_name and href:
                     entry = {"name": version_name, "link": href}
                     # HMD's page sometimes lists the same archive twice.
