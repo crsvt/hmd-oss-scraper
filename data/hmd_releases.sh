@@ -111,8 +111,6 @@ VERSIONS=(
 DEVICE_HUMAN="Nokia XR21"
 # Oldest -> Newest
 VERSIONS=(
-  # https://hmdcorporate.blob.core.windows.net/opensource/download/phones/NokiaXR21_V3.150.tar.bz2
-  "NokiaXR21_V3.150.tar.bz2"
   # https://hmdcorporate.blob.core.windows.net/opensource/download/phones/NokiaXR21_V1.090.tar.bz2
   "NokiaXR21_V1.090.tar.bz2"
   # https://hmdcorporate.blob.core.windows.net/opensource/download/phones/NokiaXR21_V3.150.tar.bz2
