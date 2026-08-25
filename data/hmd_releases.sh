@@ -2,6 +2,13 @@
 # This script contains open source version information and download links for HMD devices.
 # Generated automatically. Device order matches the HMD website.
 
+DEVICE_HUMAN="HMD Asha 305"
+# Oldest -> Newest
+VERSIONS=(
+  # https://hmdcorporate.blob.core.windows.net/opensource/download/phones/HMDAsha305_V1.010.tar.bz2
+  "HMDAsha305_V1.010.tar.bz2"
+)
+
 DEVICE_HUMAN="HMD Vibe2 5G"
 # Oldest -> Newest
 VERSIONS=(
@@ -108,6 +115,8 @@ VERSIONS=(
   "NokiaXR21_V3.150.tar.bz2"
   # https://hmdcorporate.blob.core.windows.net/opensource/download/phones/NokiaXR21_V1.090.tar.bz2
   "NokiaXR21_V1.090.tar.bz2"
+  # https://hmdcorporate.blob.core.windows.net/opensource/download/phones/NokiaXR21_V3.150.tar.bz2
+  "NokiaXR21_V3.150.tar.bz2"
 )
 
 DEVICE_HUMAN="Nokia X30 5G"

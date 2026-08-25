@@ -1,4 +1,10 @@
 {
+  "HMD Asha 305": [
+    {
+      "name": "HMDAsha305_V1.010.tar.bz2",
+      "link": "https://hmdcorporate.blob.core.windows.net/opensource/download/phones/HMDAsha305_V1.010.tar.bz2"
+    }
+  ],
   "HMD Vibe2 5G": [
     {
       "name": "HMDVibe2_5G_V1.060.tar",
@@ -101,6 +107,10 @@
     {
       "name": "NokiaXR21_V1.090.tar.bz2",
       "link": "https://hmdcorporate.blob.core.windows.net/opensource/download/phones/NokiaXR21_V1.090.tar.bz2"
+    },
+    {
+      "name": "NokiaXR21_V3.150.tar.bz2",
+      "link": "https://hmdcorporate.blob.core.windows.net/opensource/download/phones/NokiaXR21_V3.150.tar.bz2"
     }
   ],
   "Nokia X30 5G": [
