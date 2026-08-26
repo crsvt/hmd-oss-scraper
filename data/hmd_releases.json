@@ -12,7 +12,7 @@
       "name": "HMDVibe2_5G_V1.060.tar",
       "link": "https://mobileintra.sharepoint.com/teams/Kernelsourcecodeshare/Shared%20Documents/HMD%20Vibe2%205G/HMDVibe2_5G_V1.060.tar.bz2",
       "etag": null,
-      "size": 61918
+      "size": 61921
     }
   ],
   "HMD Luma": [
@@ -20,7 +20,7 @@
       "name": "HMD_Luma_V1.050.tar",
       "link": "https://mobileintra.sharepoint.com/teams/Kernelsourcecodeshare/Shared%20Documents/HMD%20Luma/HMD_Luma_V1.050.tar.xz",
       "etag": null,
-      "size": 61979
+      "size": 61937
     }
   ],
   "HMD Terra M": [
@@ -28,7 +28,7 @@
       "name": "HMD_Cupra_V1.100.tar.bz2",
       "link": "https://mobileintra.sharepoint.com/teams/Kernelsourcecodeshare/Shared%20Documents/HMD%20Cupra/HMD_Cupra_V1.100.tar.bz2",
       "etag": null,
-      "size": 62061
+      "size": 61795
     }
   ],
   "HMD Arc": [
@@ -633,30 +633,6 @@
       "link": "https://nokiaphones-opensource.azureedge.net/download/phones/Nokia8V5GUW_V1.230.tar.bz2",
       "etag": "0x8D8BB9583A3B43E",
       "size": 159906550
-    }
-  ],
-  "Nokia 215 4G": [
-    {
-      "name": "vcard.tar",
-      "link": "https://nokiaphones-opensource.azureedge.net/download/libraries/vcard.tar",
-      "etag": "0x8D8977C8CB3DE9E",
-      "size": 615936
-    }
-  ],
-  "Nokia 225 4G": [
-    {
-      "name": "vcard.tar",
-      "link": "https://nokiaphones-opensource.azureedge.net/download/libraries/vcard.tar",
-      "etag": "0x8D8977C8CB3DE9E",
-      "size": 615936
-    }
-  ],
-  "Nokia 220 4G": [
-    {
-      "name": "vcard.tar",
-      "link": "https://nokiaphones-opensource.azureedge.net/download/libraries/vcard.tar",
-      "etag": "0x8D8977C8CB3DE9E",
-      "size": 615936
     }
   ],
   "Nokia X71": [

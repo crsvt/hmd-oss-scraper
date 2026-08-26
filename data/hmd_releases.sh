@@ -422,27 +422,6 @@ VERSIONS=(
   "Nokia8V5GUW_V1.230.tar.bz2"
 )
 
-DEVICE_HUMAN="Nokia 215 4G"
-# Oldest -> Newest
-VERSIONS=(
-  # https://nokiaphones-opensource.azureedge.net/download/libraries/vcard.tar
-  "vcard.tar"
-)
-
-DEVICE_HUMAN="Nokia 225 4G"
-# Oldest -> Newest
-VERSIONS=(
-  # https://nokiaphones-opensource.azureedge.net/download/libraries/vcard.tar
-  "vcard.tar"
-)
-
-DEVICE_HUMAN="Nokia 220 4G"
-# Oldest -> Newest
-VERSIONS=(
-  # https://nokiaphones-opensource.azureedge.net/download/libraries/vcard.tar
-  "vcard.tar"
-)
-
 DEVICE_HUMAN="Nokia X71"
 # Oldest -> Newest
 VERSIONS=(
