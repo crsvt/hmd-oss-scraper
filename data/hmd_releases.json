@@ -12,7 +12,7 @@
       "name": "HMDVibe2_5G_V1.060.tar",
       "link": "https://mobileintra.sharepoint.com/teams/Kernelsourcecodeshare/Shared%20Documents/HMD%20Vibe2%205G/HMDVibe2_5G_V1.060.tar.bz2",
       "etag": null,
-      "size": 61856
+      "size": 61821
     }
   ],
   "HMD Luma": [
@@ -20,7 +20,7 @@
       "name": "HMD_Luma_V1.050.tar",
       "link": "https://mobileintra.sharepoint.com/teams/Kernelsourcecodeshare/Shared%20Documents/HMD%20Luma/HMD_Luma_V1.050.tar.xz",
       "etag": null,
-      "size": 61727
+      "size": 61959
     }
   ],
   "HMD Terra M": [
@@ -28,7 +28,7 @@
       "name": "HMD_Cupra_V1.100.tar.bz2",
       "link": "https://mobileintra.sharepoint.com/teams/Kernelsourcecodeshare/Shared%20Documents/HMD%20Cupra/HMD_Cupra_V1.100.tar.bz2",
       "etag": null,
-      "size": 62083
+      "size": 62092
     }
   ],
   "HMD Arc": [
